@@ -1,0 +1,7 @@
+{
+  "name": "arac-kiralama",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
