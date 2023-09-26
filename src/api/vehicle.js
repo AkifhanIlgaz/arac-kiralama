@@ -12,7 +12,7 @@ class Vehicle {
 	 * @param {number} minAge
 	 * @param {number} minLicence
 	 */
-	constructor(img, brand, type, gear, fuel, hourPrice, dayPrice, usagePrice, year, minAge, minLicence) {
+	constructor(img, brand, type, gear, fuel, hourPrice, dayPrice, usagePrice, year, minAge, minLicense) {
 		this.img = img
 		this.brand = brand
 		this.type = type
@@ -24,7 +24,7 @@ class Vehicle {
 		this.brand = brand
 		this.year = year
 		this.minAge = minAge
-		this.minLicence = minLicence
+		this.minLicense = minLicense
 	}
 }
 
