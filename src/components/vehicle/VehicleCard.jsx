@@ -1,5 +1,6 @@
-import { IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCol, IonRow } from '@ionic/react'
-import Vehicle from '../api/vehicle'
+import { IonCard, IonCardContent, IonCardHeader, IonCol, IonRow } from '@ionic/react'
+import Vehicle from '../../api/vehicle'
+import VehicleTitle from './VehicleTitle'
 
 /**
  *
@@ -23,23 +24,7 @@ const VehicleCard = ({ vehicle }) => {
 							background: '#f0faff'
 						}}
 					>
-						<IonCardHeader
-							style={{
-								paddingBottom: '10px'
-							}}
-						>
-							<IonCardSubtitle>
-								<h4
-									style={{
-										fontSize: '13px',
-										fontWeight: '700',
-										color: '#1f94d6'
-									}}
-								>
-									Araç Özellikleri
-								</h4>
-							</IonCardSubtitle>
-						</IonCardHeader>
+						<VehicleTitle title={'Araç Özellikleri'} />
 
 						<IonRow
 							className="ion-align-items-center ion-justify-content-space-around"
@@ -109,23 +94,7 @@ const VehicleCard = ({ vehicle }) => {
 							background: '#f0faff'
 						}}
 					>
-						<IonCardHeader
-							style={{
-								paddingBottom: '10px'
-							}}
-						>
-							<IonCardSubtitle>
-								<h4
-									style={{
-										fontSize: '13px',
-										fontWeight: '700',
-										color: '#1f94d6'
-									}}
-								>
-									Kiralama Koşulları
-								</h4>
-							</IonCardSubtitle>
-						</IonCardHeader>
+						<VehicleTitle title={'Kiralama Koşulları'} />
 
 						<IonRow
 							className="ion-align-items-center "

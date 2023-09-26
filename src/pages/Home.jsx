@@ -1,6 +1,6 @@
 import { IonContent, IonGrid, IonPage } from '@ionic/react'
 import vehicles from '../api/vehicles'
-import VehicleCard from '../components/VehicleCard'
+import VehicleCard from '../components/vehicle/VehicleCard'
 
 const Home = () => {
 	return (
