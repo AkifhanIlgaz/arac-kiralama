@@ -15,6 +15,7 @@ const VehicleCard = ({ vehicle }) => {
 
 					<img src={vehicle.img} alt="" />
 
+					{/* Araç Özellikleri */}
 					<IonCardContent
 						className="ion-no-padding"
 						style={{
@@ -40,7 +41,12 @@ const VehicleCard = ({ vehicle }) => {
 							</IonCardSubtitle>
 						</IonCardHeader>
 
-						<IonRow className="ion-align-items-center ion-justify-content-space-around">
+						<IonRow
+							className="ion-align-items-center ion-justify-content-space-around"
+							style={{
+								fontSize: '14px'
+							}}
+						>
 							<IonCol
 								size="2"
 								push=".5"
@@ -64,7 +70,12 @@ const VehicleCard = ({ vehicle }) => {
 								<span>{vehicle.fuel}</span>
 							</IonCol>
 						</IonRow>
-						<IonRow className="ion-align-items-center ion-justify-content-space-around">
+						<IonRow
+							className="ion-align-items-center ion-justify-content-space-around"
+							style={{
+								fontSize: '14px'
+							}}
+						>
 							<IonCol
 								size="2"
 								push=".5"
@@ -86,6 +97,92 @@ const VehicleCard = ({ vehicle }) => {
 							</IonCol>
 							<IonCol pull=".2">
 								<span>{vehicle.gear}</span>
+							</IonCol>
+						</IonRow>
+					</IonCardContent>
+
+					{/* Kiralama Koşulları */}
+					<IonCardContent
+						className="ion-no-padding"
+						style={{
+							fontSize: '14px',
+							background: '#f0faff'
+						}}
+					>
+						<IonCardHeader
+							style={{
+								paddingBottom: '10px'
+							}}
+						>
+							<IonCardSubtitle>
+								<h4
+									style={{
+										fontSize: '13px',
+										fontWeight: '700',
+										color: '#1f94d6'
+									}}
+								>
+									Kiralama Koşulları
+								</h4>
+							</IonCardSubtitle>
+						</IonCardHeader>
+
+						<IonRow
+							className="ion-align-items-center "
+							style={{
+								fontSize: '14px'
+							}}
+						>
+							<IonCol
+								size="2"
+								push=".5"
+								style={{
+									display: 'flex',
+									alignItems: 'center'
+								}}
+							>
+								<img
+									src="https://driveyoyo.com/Content/images/yas.png"
+									alt=""
+									style={{
+										width: '28px',
+										border: '2px solid #d5d5d5',
+										borderRadius: '10px',
+										padding: '5px'
+									}}
+								/>
+							</IonCol>
+							<IonCol pull=".2">
+								<span>{`${vehicle.minAge} yaş ve üzeri`}</span>
+							</IonCol>
+						</IonRow>
+						<IonRow
+							className="ion-align-items-center ion-justify-content-space-around"
+							style={{
+								fontSize: '14px'
+							}}
+						>
+							<IonCol
+								size="2"
+								push=".5"
+								style={{
+									display: 'flex',
+									alignItems: 'center'
+								}}
+							>
+								<img
+									src="https://driveyoyo.com/Content/images/ehliyet.png"
+									alt=""
+									style={{
+										width: '28px',
+										border: '2px solid #d5d5d5',
+										borderRadius: '10px',
+										padding: '5px'
+									}}
+								/>
+							</IonCol>
+							<IonCol pull=".2">
+								<span>{`Ehliyet yaşı ${vehicle.minLicence} ve üzeri`}</span>
 							</IonCol>
 						</IonRow>
 					</IonCardContent>
