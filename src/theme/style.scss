@@ -1,0 +1,45 @@
+* {
+	text-transform: none;
+	// border-radius: 0 !important;
+}
+
+.auth-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.ion-height {
+	height: 100vh;
+}
+
+.ion-transparent {
+	box-shadow: none !important;
+}
+
+.ion-bold {
+	font-weight: bold;
+}
+
+.ion-select {
+	height: 5vh;
+	line-height: 5vh;
+	vertical-align: middle;
+	border-radius: 6px;
+}
+
+.ion-input {
+	background-color: #fff;
+	color: grey;
+	height: 5vh;
+	line-height: 5vh;
+	vertical-align: middle;
+}
+
+.card-content {
+	padding: 10px;
+}
+
+
+

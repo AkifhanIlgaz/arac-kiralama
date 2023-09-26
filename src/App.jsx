@@ -18,6 +18,9 @@ import '@ionic/react/css/text-alignment.css'
 import '@ionic/react/css/text-transformation.css'
 
 /* Theme variables */
+import { Route } from 'react-router'
+import Home from './pages/Home'
+import './theme/style.scss'
 import './theme/variables.css'
 
 setupIonicReact()
@@ -26,8 +29,9 @@ const App = () => (
 	<IonApp>
 		<IonReactRouter>
 			<IonRouterOutlet>
-			
-	
+				<Route exact path={'/home'}>
+					<Home />
+				</Route>
 			</IonRouterOutlet>
 		</IonReactRouter>
 	</IonApp>
