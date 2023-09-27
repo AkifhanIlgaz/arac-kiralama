@@ -1,7 +1,8 @@
-import { IonButton, IonCard, IonCardHeader, IonCol, IonRow } from '@ionic/react'
+import { IonCard, IonCardHeader, IonCol, IonRow } from '@ionic/react'
 import Vehicle from '../../api/vehicle'
 import PriceInfo from '../price/PriceInfo'
 import RentConditions from './RentConditions'
+import VehicleDetail from './VehicleDetail'
 import VehicleInfo from './VehicleInfo'
 
 /**
@@ -13,7 +14,7 @@ const VehicleCard = ({ vehicle }) => {
 	return (
 		<IonRow className="ion-align-items-center ion-justify-content-center ">
 			<IonCol>
-				<IonCard className="">
+				<IonCard>
 					{/* Araç ismi */}
 					<IonCardHeader className="vehicle-brand">{vehicle.brand}</IonCardHeader>
 
@@ -29,30 +30,8 @@ const VehicleCard = ({ vehicle }) => {
 					{/* Fiyatlar */}
 					<PriceInfo hourPrice={vehicle.hourPrice} dayPrice={vehicle.dayPrice} kmPrice={vehicle.kmPrice} />
 
-					<IonRow className="ion-align-items-center ion-justify-content-center row">
-						<IonCol
-							style={{
-								display: 'block',
-								textAlign: 'center'
-							}}
-						>
-							<IonButton
-								size="medium"
-								expand="block"
-								style={{
-									minHeight: '2em',
-									color: 'black',
-									border: 'solid 1px #818181',
-									borderRadius: '8px',
-									boxShadow: '0px 3px 10px 0px rgb(0 0 0 / 8%)',
-									margin: '10px'
-								}}
-								color={'white'}
-							>
-								<span className="btn">Araç Detay</span>
-							</IonButton>
-						</IonCol>
-					</IonRow>
+					{/* Araç Detay */}
+					<VehicleDetail />
 				</IonCard>
 			</IonCol>
 		</IonRow>
