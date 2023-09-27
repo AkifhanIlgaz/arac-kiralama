@@ -29,7 +29,9 @@ export const getVehicles = filters => {
 export const brands = ['Renault Clio', 'Volkswagen Polo', 'Fiat Egea Cross', 'Ford Kuga']
 export const types = ['Sedan', 'Hatchback']
 export const fuels = ['Benzin', 'Dizel']
-export const gear = ['Otomatik', 'Manuel']
-export const year = [1, 2, 3, 4, 5]
+export const gears = ['Otomatik', 'Manuel']
+export const ages = [21, 22, 23, 24, 25]
+export const licenseAges = [1, 2, 3, 4, 5]
+export const sortOptions = ['asc', 'desc']
 
 export default mockVehicles

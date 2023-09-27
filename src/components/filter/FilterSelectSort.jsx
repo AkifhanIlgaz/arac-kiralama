@@ -1,10 +1,10 @@
 import { IonItem, IonSelect, IonSelectOption } from '@ionic/react'
+import { sortOptions } from '../../api/vehicles'
 
-const FilterSelect = ({ filters, setFilters, label, objKey, options }) => {
+const FilterSelectSort = ({ filters, setFilters, label, objKey }) => {
 	return (
 		<IonItem>
 			<IonSelect
-				value={filters[objKey]}
 				label={label}
 				labelPlacement="fixed"
 				onIonChange={e => {
@@ -13,10 +13,10 @@ const FilterSelect = ({ filters, setFilters, label, objKey, options }) => {
 					setFilters(newFilter)
 				}}
 			>
-				{options.map((opt, i) => {
+				{sortOptions.map((opt, i) => {
 					return (
 						<IonSelectOption key={i} value={opt}>
-							{opt}
+							{opt === 'asc' ? 'Artan Fiyat' : 'Azalan Fiyat'}
 						</IonSelectOption>
 					)
 				})}
@@ -25,4 +25,4 @@ const FilterSelect = ({ filters, setFilters, label, objKey, options }) => {
 	)
 }
 
-export default FilterSelect
+export default FilterSelectSort
