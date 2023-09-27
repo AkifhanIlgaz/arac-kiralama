@@ -10,8 +10,6 @@ const numOfDigits = num => {
 }
 
 const PriceInfo = ({ hourPrice, dayPrice, kmPrice, provision }) => {
-	const x = 6.0
-	console.log(dayPrice.toPrecision(numOfDigits(dayPrice) + 2))
 	return (
 		<>
 			<PriceRow title={'Saatlik'} price={`${hourPrice.toLocaleString('tr-TR')} ₺`} />

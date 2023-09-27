@@ -14,7 +14,7 @@ const VehicleCard = ({ vehicle }) => {
 	return (
 		<IonRow className="ion-align-items-center ion-justify-content-center ">
 			<IonCol>
-				<IonCard>
+				<IonCard className="ion-no-margin ion-margin-start ion-margin-end ion-margin-bottom">
 					{/* Araç ismi */}
 					<IonCardHeader className="vehicle-brand">{vehicle.brand}</IonCardHeader>
 
