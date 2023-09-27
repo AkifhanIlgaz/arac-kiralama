@@ -29,7 +29,7 @@ const VehicleCard = ({ vehicle }) => {
 					{/* Fiyatlar */}
 					<PriceInfo hourPrice={vehicle.hourPrice} dayPrice={vehicle.dayPrice} kmPrice={vehicle.kmPrice} />
 
-					<IonRow className="ion-align-items-center ion-justify-content-center">
+					<IonRow className="ion-align-items-center ion-justify-content-center row">
 						<IonCol
 							style={{
 								display: 'block',
@@ -45,15 +45,13 @@ const VehicleCard = ({ vehicle }) => {
 									border: 'solid 1px #818181',
 									borderRadius: '8px',
 									boxShadow: '0px 3px 10px 0px rgb(0 0 0 / 8%)',
-									padding: '7px',
 									margin: '10px'
 								}}
 								color={'white'}
 							>
-								Araç Detay
+								<span className="btn">Araç Detay</span>
 							</IonButton>
 						</IonCol>
-						<IonRow></IonRow>
 					</IonRow>
 				</IonCard>
 			</IonCol>
