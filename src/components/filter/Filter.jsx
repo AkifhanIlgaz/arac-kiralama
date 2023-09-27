@@ -1,6 +1,7 @@
 import { IonButton, IonButtons, IonContent, IonHeader, IonItem, IonList, IonModal, IonSelect, IonSelectOption, IonToolbar } from '@ionic/react'
 import { useState } from 'react'
-import { getVehicles, year } from '../../api/vehicles'
+import { brands, getVehicles, year } from '../../api/vehicles'
+import FilterSelect from './FilterSelect'
 
 const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 	const [filters, setFilters] = useState({})
@@ -31,18 +32,8 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 			</IonHeader>
 			<IonContent scrollY={false}>
 				<IonList lines="full">
-					<IonItem>
-						<IonSelect
-							label="Marka"
-							labelPlacement="fixed"
-							onIonChange={e => {
-								setFilters({ ...filters, brand: e.detail.value })
-							}}
-						>
-							<IonSelectOption value={'Renault Clio'}>Renault Clio</IonSelectOption>
-							<IonSelectOption value={'Dizel'}>Dizel</IonSelectOption>
-						</IonSelect>
-					</IonItem>
+					<FilterSelect filters={filters} setFilters={setFilters} label={'Marka'} key={'brand'} options={brands} />
+
 					<IonItem>
 						<IonSelect
 							label="Yakıt"
