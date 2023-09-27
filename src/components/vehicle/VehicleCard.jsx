@@ -1,5 +1,6 @@
-import { IonCard, IonCardHeader, IonCol, IonRow } from '@ionic/react'
+import { IonButton, IonCard, IonCardHeader, IonCol, IonRow } from '@ionic/react'
 import Vehicle from '../../api/vehicle'
+import PriceInfo from '../price/PriceInfo'
 import RentConditions from './RentConditions'
 import VehicleInfo from './VehicleInfo'
 
@@ -12,7 +13,7 @@ const VehicleCard = ({ vehicle }) => {
 	return (
 		<IonRow className="ion-align-items-center ion-justify-content-center ">
 			<IonCol>
-				<IonCard className=" ">
+				<IonCard className="">
 					{/* Araç ismi */}
 					<IonCardHeader className="vehicle-brand">{vehicle.brand}</IonCardHeader>
 
@@ -25,47 +26,34 @@ const VehicleCard = ({ vehicle }) => {
 					{/* Kiralama Koşulları */}
 					<RentConditions minAge={vehicle.minAge} minLicense={vehicle.minLicense} />
 
-					<IonRow className="ion-align-items-space-around ion-justify-content-center row">
-						<IonCol push=".5">Saatlik</IonCol>
-						<IonCol></IonCol>
-						<IonCol>
-							<strong
+					{/* Fiyatlar */}
+					<PriceInfo hourPrice={vehicle.hourPrice} dayPrice={vehicle.dayPrice} kmPrice={vehicle.kmPrice} />
+
+					<IonRow className="ion-align-items-center ion-justify-content-center">
+						<IonCol
+							style={{
+								display: 'block',
+								textAlign: 'center'
+							}}
+						>
+							<IonButton
+								size="medium"
+								expand="block"
 								style={{
-									fontSize: '14px',
-									fontWeight: '400',
-									lineHeight: '1.5',
-									color: '#212529'
+									minHeight: '2em',
+									color: 'black',
+									border: 'solid 1px #818181',
+									borderRadius: '8px',
+									boxShadow: '0px 3px 10px 0px rgb(0 0 0 / 8%)',
+									padding: '7px',
+									margin: '10px'
 								}}
-							>{`${vehicle.hourPrice.toPrecision(5)} ₺`}</strong>{' '}
+								color={'white'}
+							>
+								Araç Detay
+							</IonButton>
 						</IonCol>
-					</IonRow>
-					<IonRow className="ion-align-items-space-around ion-justify-content-center row">
-						<IonCol push=".5">Günlük</IonCol>
-						<IonCol></IonCol>
-						<IonCol>
-							<strong
-								style={{
-									fontSize: '14px',
-									fontWeight: '400',
-									lineHeight: '1.5',
-									color: '#212529'
-								}}
-							>{`${vehicle.dayPrice.toPrecision(5)} ₺`}</strong>
-						</IonCol>
-					</IonRow>
-					<IonRow className="ion-align-items-space-around ion-justify-content-center">
-						<IonCol push=".5">Kullanım</IonCol>
-						<IonCol></IonCol>
-						<IonCol>
-							<strong
-								style={{
-									fontSize: '14px',
-									fontWeight: '400',
-									lineHeight: '1.5',
-									color: '#212529'
-								}}
-							>{`${vehicle.hourPrice.toPrecision(5)} ₺/Km`}</strong>
-						</IonCol>
+						<IonRow></IonRow>
 					</IonRow>
 				</IonCard>
 			</IonCol>

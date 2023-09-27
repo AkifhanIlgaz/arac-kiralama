@@ -7,12 +7,12 @@ class Vehicle {
 	 * @param {string} fuel
 	 * @param {number} hourPrice
 	 * @param {number} dayPrice
-	 * @param {number} usagePrice
+	 * @param {number} kmPrice
 	 * @param {number} year
 	 * @param {number} minAge
 	 * @param {number} minLicence
 	 */
-	constructor(img, brand, type, gear, fuel, hourPrice, dayPrice, usagePrice, year, minAge, minLicense) {
+	constructor(img, brand, type, gear, fuel, hourPrice, dayPrice, kmPrice, year, minAge, minLicense) {
 		this.img = img
 		this.brand = brand
 		this.type = type
@@ -20,7 +20,7 @@ class Vehicle {
 		this.fuel = fuel
 		this.hourPrice = hourPrice
 		this.dayPrice = dayPrice
-		this.usagePrice = usagePrice
+		this.kmPrice = kmPrice
 		this.brand = brand
 		this.year = year
 		this.minAge = minAge
