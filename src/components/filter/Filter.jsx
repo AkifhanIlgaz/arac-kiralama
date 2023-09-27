@@ -10,7 +10,6 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 			isOpen={isFilterOpen}
 			onDidDismiss={() => {
 				setIsFilterOpen(false)
-				setFilters({})
 			}}
 		>
 			<IonHeader>
@@ -21,7 +20,6 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 					<IonButtons slot="end">
 						<IonButton
 							onClick={() => {
-								console.log(filters)
 								setVehicles(getVehicles(filters))
 								setIsFilterOpen(false)
 							}}
@@ -147,6 +145,18 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 						</IonSelect>
 					</IonItem>
 				</IonList>
+
+				<IonButton
+					expand="block"
+					className="ion-margin"
+					onClick={() => {
+						setFilters({})
+						setVehicles(getVehicles({}))
+						setIsFilterOpen(false)
+					}}
+				>
+					Reset
+				</IonButton>
 			</IonContent>
 		</IonModal>
 	)
