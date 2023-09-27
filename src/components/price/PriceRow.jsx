@@ -3,7 +3,9 @@ import { IonCol, IonRow } from '@ionic/react'
 const PriceRow = ({ title, price }) => {
 	return (
 		<IonRow className="ion-align-items-space-around ion-justify-content-center row">
-			<IonCol push=".5">{title}</IonCol>
+			<IonCol push=".5" size="5">
+				{title}
+			</IonCol>
 			<IonCol></IonCol>
 			<IonCol>
 				<strong

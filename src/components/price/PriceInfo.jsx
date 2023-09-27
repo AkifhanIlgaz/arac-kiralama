@@ -9,14 +9,15 @@ const numOfDigits = num => {
 	return digits
 }
 
-const PriceInfo = ({ hourPrice, dayPrice, kmPrice }) => {
+const PriceInfo = ({ hourPrice, dayPrice, kmPrice, provision }) => {
 	const x = 6.0
 	console.log(dayPrice.toPrecision(numOfDigits(dayPrice) + 2))
 	return (
 		<>
 			<PriceRow title={'Saatlik'} price={`${hourPrice.toLocaleString('tr-TR')} ₺`} />
 			<PriceRow title={'Günlük'} price={`${dayPrice.toLocaleString('tr-TR')} ₺`} />
-			<PriceRow title={'Kullanım'} price={`${kmPrice.toLocaleString('tr-TR')} ₺/Km`} />
+			<PriceRow title={'Mesafe Ücreti'} price={`${kmPrice.toLocaleString('tr-TR')} ₺/Km`} />
+			<PriceRow title={'Provizyon Bedeli'} price={`${provision.toLocaleString('tr-TR')} ₺`} />
 		</>
 	)
 }

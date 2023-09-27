@@ -28,7 +28,7 @@ const VehicleCard = ({ vehicle }) => {
 					<RentConditions minAge={vehicle.minAge} minLicense={vehicle.minLicense} />
 
 					{/* Fiyatlar */}
-					<PriceInfo hourPrice={vehicle.hourPrice} dayPrice={vehicle.dayPrice} kmPrice={vehicle.kmPrice} />
+					<PriceInfo hourPrice={vehicle.hourPrice} dayPrice={vehicle.dayPrice} kmPrice={vehicle.kmPrice} provision={vehicle.provision} />
 
 					{/* Araç Detay */}
 					<VehicleDetail />
