@@ -6,7 +6,7 @@ import VehicleTitle from './VehicleTitle'
 const RentConditions = ({ minAge, minLicense }) => {
 	return (
 		<IonCardContent
-			className="ion-no-padding"
+			className="ion-no-padding ion-padding-bottom row"
 			style={{
 				fontSize: '14px',
 				background: '#f0faff'
