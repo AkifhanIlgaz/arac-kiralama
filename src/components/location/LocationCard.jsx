@@ -1,27 +1,22 @@
 import { IonCard, IonCardContent, IonIcon, IonText } from '@ionic/react'
 import { locationOutline } from 'ionicons/icons'
+import { useHistory } from 'react-router'
 
-const LocationCard = ({ location }) => {
+const LocationCard = ({ index, loc }) => {
+	const history = useHistory()
+
 	return (
-		<IonCard>
+		<IonCard onClick={() => history.push(`/locations/${index}`)}>
 			<IonCardContent
 				style={{
 					display: 'flex',
-					alignItems: 'center'
+					alignItems: 'center',
+					justifyContent: 'center'
 				}}
 			>
-				<IonIcon
-					icon={locationOutline}
-					size="large"
-					color="dark"
-					style={{
-						paddingRight: '.7rem'
-					}}
-				></IonIcon>
-                
-				<IonText color={'dark'} style={{ fontWeight: 700 }}>
-					{location ? location : 'Avcılar İdo İspark'}
-				</IonText>
+				<IonIcon icon={locationOutline} size="large" color="medium" style={{ paddingRight: '.7rem' }}></IonIcon>
+
+				<IonText style={{ fontWeight: 700, color: '#1f94d6' }}>{loc}</IonText>
 			</IonCardContent>
 		</IonCard>
 	)

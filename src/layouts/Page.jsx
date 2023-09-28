@@ -1,4 +1,23 @@
-import { IonButtons, IonContent, IonHeader, IonItem, IonList, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react'
+import { IonButtons, IonContent, IonHeader, IonItem, IonList, IonMenu, IonMenuButton, IonMenuToggle, IonPage, IonTitle, IonToolbar } from '@ionic/react'
+import { useHistory } from 'react-router'
+
+const MenuItem = ({ text, href }) => {
+	const history = useHistory()
+
+	return (
+		<IonItem
+			onClick={e => {
+				e.preventDefault()
+				history.push(href)
+			}}
+			style={{
+				color: '#1f94d6'
+			}}
+		>
+			{text}
+		</IonItem>
+	)
+}
 
 const Page = ({ children }) => {
 	return (
@@ -11,10 +30,12 @@ const Page = ({ children }) => {
 				</IonHeader>
 				<IonContent scrollY={false}>
 					<IonList lines="none">
-						<IonItem>ARAÇLAR VE FİYATLAR</IonItem>
-						<IonItem>LOKASYONLAR</IonItem>
-						<IonItem>PROFİL</IonItem>
-						<IonItem>ÇIKIŞ YAP</IonItem>
+						<IonMenuToggle autoHide>
+							<MenuItem text={'ARAÇLAR VE FİYATLAR'} href={'/home'}></MenuItem>
+							<MenuItem text={'LOKASYONLAR'} href={'/locations'}></MenuItem>
+							<MenuItem text={'PROFİL'} href={'#'}></MenuItem>
+							<MenuItem text={'ÇIKIŞ YAP'} href={'#'}></MenuItem>
+						</IonMenuToggle>
 					</IonList>
 				</IonContent>
 			</IonMenu>
