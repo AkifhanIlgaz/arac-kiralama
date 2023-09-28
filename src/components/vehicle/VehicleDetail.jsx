@@ -22,7 +22,7 @@ const VehicleDetail = () => {
 					}}
 					color={'white'}
 				>
-					<span className="btn">Araç Detay</span>
+					<span className="btn">ARAÇ KİRALA</span>
 				</IonButton>
 			</IonCol>
 		</IonRow>

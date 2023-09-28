@@ -15,9 +15,17 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 			}}
 		>
 			<IonHeader>
-				<IonToolbar>
+				<IonToolbar color="transparent">
 					<IonButtons slot="start">
-						<IonButton onClick={() => setIsFilterOpen(false)}>İptal</IonButton>
+						<IonButton onClick={() => setIsFilterOpen(false)}>
+							<span
+								style={{
+									color: '#3880ff'
+								}}
+							>
+								İptal
+							</span>
+						</IonButton>
 					</IonButtons>
 					<IonButtons slot="end">
 						<IonButton
@@ -26,7 +34,13 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 								setIsFilterOpen(false)
 							}}
 						>
-							Filtrele
+							<span
+								style={{
+									color: '#3880ff'
+								}}
+							>
+								Filtrele
+							</span>
 						</IonButton>
 					</IonButtons>
 				</IonToolbar>
