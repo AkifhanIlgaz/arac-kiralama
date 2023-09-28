@@ -3,6 +3,7 @@ import { filterOutline } from 'ionicons/icons'
 import { useEffect, useState } from 'react'
 import { getVehicles } from '../api/vehicles'
 import Filter from '../components/filter/Filter'
+import SocialFooter from '../components/footer/SocialFooter'
 import VehicleCard from '../components/vehicle/VehicleCard'
 
 const Home = () => {
@@ -16,7 +17,10 @@ const Home = () => {
 	return (
 		<IonPage>
 			<IonContent>
-				<IonGrid className="ion-align-items-center ion-justify-content-center ion-height">{vehicles && vehicles.map((vehicle, i) => <VehicleCard key={i} vehicle={vehicle} />)}</IonGrid>
+				<IonGrid className="ion-align-items-center ion-justify-content-center ion-height">
+					{vehicles && vehicles.map((vehicle, i) => <VehicleCard key={i} vehicle={vehicle} />)}
+					<SocialFooter />
+				</IonGrid>
 
 				<IonFab slot="fixed" vertical="bottom" horizontal="end">
 					<IonFabButton color={'fab'} onClick={() => setIsFilterOpen(true)}>

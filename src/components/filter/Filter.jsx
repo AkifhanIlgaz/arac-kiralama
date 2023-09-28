@@ -22,7 +22,6 @@ const Filter = ({ isFilterOpen, setIsFilterOpen, setVehicles }) => {
 					<IonButtons slot="end">
 						<IonButton
 							onClick={() => {
-								console.log(filters)
 								setVehicles(getVehicles(filters))
 								setIsFilterOpen(false)
 							}}
