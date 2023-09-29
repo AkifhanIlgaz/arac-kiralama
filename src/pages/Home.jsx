@@ -1,29 +1,25 @@
-import { IonContent, IonFab, IonFabButton, IonGrid, IonIcon, IonPage } from '@ionic/react'
+import { IonContent, IonFab, IonFabButton, IonGrid, IonIcon } from '@ionic/react'
 import { filterOutline } from 'ionicons/icons'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getVehicles } from '../api/vehicles'
 import Filter from '../components/filter/Filter'
 import CopyRight from '../components/footer/CopyRight'
 import SocialFooter from '../components/footer/SocialFooter'
 import VehicleCard from '../components/vehicle/VehicleCard'
+import Page from '../layouts/Page'
 
 const Home = () => {
 	const [isFilterOpen, setIsFilterOpen] = useState(false)
 	const [vehicles, setVehicles] = useState([])
-	const contentRef = useRef(null)
-
-	const scrollToTop = () => {
-		contentRef.current && contentRef.current.scrollToTop(500)
-	}
 
 	useEffect(() => {
 		setVehicles(getVehicles({}))
 	}, [])
 
 	return (
-		<IonPage>
-			<IonContent ref={contentRef}>
-				<IonGrid className="ion-align-items-center ion-justify-content-center ion-height">
+		<Page>
+			<IonContent>
+				<IonGrid className="ion-align-items-center ion-justify-content-center ion-height ion-margin-top">
 					{vehicles && vehicles.map((vehicle, i) => <VehicleCard key={i} vehicle={vehicle} />)}
 					<SocialFooter />
 					<CopyRight />
@@ -37,7 +33,7 @@ const Home = () => {
 
 				<Filter isFilterOpen={isFilterOpen} setIsFilterOpen={setIsFilterOpen} setVehicles={setVehicles} />
 			</IonContent>
-		</IonPage>
+		</Page>
 	)
 }
 

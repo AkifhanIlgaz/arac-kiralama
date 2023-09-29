@@ -20,6 +20,7 @@ import '@ionic/react/css/text-transformation.css'
 /* Theme variables */
 import { Route } from 'react-router'
 import Home from './pages/Home'
+import Locations from './pages/Locations'
 import './theme/style.scss'
 import './theme/variables.css'
 
@@ -31,6 +32,9 @@ const App = () => (
 			<IonRouterOutlet>
 				<Route exact path={'/home'}>
 					<Home />
+				</Route>
+				<Route exact path={'/locations'}>
+					<Locations />
 				</Route>
 			</IonRouterOutlet>
 		</IonReactRouter>
