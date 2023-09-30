@@ -14,8 +14,6 @@ const LocationCard = ({ index, loc }) => {
 					justifyContent: 'center'
 				}}
 			>
-				<IonIcon icon={locationOutline} size="large" color="medium" style={{ paddingRight: '.7rem' }}></IonIcon>
-
 				<IonText style={{ fontWeight: 700, color: '#1f94d6' }}>{loc}</IonText>
 			</IonCardContent>
 		</IonCard>
