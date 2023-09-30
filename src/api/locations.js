@@ -39,7 +39,7 @@ const locations = new Map([
 
 export const getLocation = id => {
 	const loc = locations.get(id)
-
+	console.log(loc)
 	return new Promise((resolve, reject) => {
 		setTimeout(() => resolve(loc), 2000)
 	})
