@@ -10,7 +10,7 @@ const Locations = () => {
 			<IonContent className="ion-text-center">
 				<h1>Lokasyonlar</h1>
 				{Array.from(locations.entries()).map(([index, loc]) => (
-					<LocationCard index={index} loc={loc} />
+					<LocationCard key={index} index={index} loc={loc} />
 				))}
 				<LocationCardSkeleton />
 			</IonContent>
