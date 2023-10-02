@@ -28,11 +28,11 @@ const Location = () => {
 					) : (
 						<div>
 							<h1>{loc.title}</h1>
-							<p>{loc.info}</p>
-							<a href={loc.map}>
+							{loc.info}
+							<a href={loc.map} style={{ textDecoration: 'none' }}>
+								<p>{loc.full}</p>
 								<IonIcon icon={locationOutline} size="large"></IonIcon>
 							</a>
-							<p>{loc.full}</p>
 						</div>
 					)}
 				</IonGrid>
